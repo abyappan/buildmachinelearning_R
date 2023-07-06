@@ -1,8 +1,16 @@
+print("Runing linear model: R script")
+
+# Locate arguments
+args = commandArgs()
+# print(args)
+
 # Set file name variable
-dataset = read.csv('regrex1.csv')
+dataset = read.csv(args[6])
+print(paste("Your file is ", args[6]))
 
 # Linear model and summary
 model = lm(formula = y ~ x, data = dataset)
+print("Linear model summary:")
 
 summary(model)
 
