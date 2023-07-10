@@ -1,4 +1,4 @@
-print("Runing linear model: R script")
+print("Running linear model: R script")
 
 # Locate arguments
 args = commandArgs()
@@ -16,14 +16,15 @@ summary(model)
 
 # Plot scatter plot of original data
 library(ggplot2)
-ggplot() +
+r_orig <- ggplot() +
   geom_point(aes(x = dataset$x, y = dataset$y),
              colour = 'red') +
   ggtitle('x vs y') +
   xlab('x') +
   ylab('y')
+ggsave('r_orig.png', r_orig, 'png', width = 4, height = 4)
 
-# Plot linear regression mode
+# Plot linear regression model
 library(ggplot2)
 ggplot() +
   geom_line(aes(x = dataset$x, y = predict(model, newdata = dataset)),
@@ -34,10 +35,11 @@ ggplot() +
 
 # Plot linear regression model with original data
 library(ggplot2)
-ggplot() + geom_point(aes(x = dataset$x, y = dataset$y),
+r_lm <- ggplot() + geom_point(aes(x = dataset$x, y = dataset$y),
              colour = 'red') +
   geom_line(aes(x = dataset$x, y = predict(model, newdata = dataset)),
             colour = 'blue') +
   ggtitle('x vs y') +
   xlab('x') +
   ylab('y')
+ggsave('r_lm.png', r_lm, 'png', width = 4, height = 4)
