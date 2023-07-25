@@ -11,6 +11,9 @@ dependencies:
   - r-tidyverse
   - r-plotly
   - r-stringr
+  - r-caret
+    r-Depends
+    r-Suggests
   - python=3.11
   - numpy
   - psutil
