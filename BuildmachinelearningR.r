@@ -1,5 +1,5 @@
 # Install packages
-install.packages('caret', dependencies=c("Depends", "Suggests"))
+# install.packages('caret', dependencies=c("Depends", "Suggests"))
 library(caret)
 # -------------
 # Load data

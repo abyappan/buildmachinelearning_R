@@ -1,4 +1,4 @@
-name: example-environment
+name: caret_env
 channels:
   - conda-forge
   - bioconda
@@ -12,8 +12,7 @@ dependencies:
   - r-plotly
   - r-stringr
   - r-caret
-  - r-Depends
-  - r-Suggests
+  - r-irkernel
   - python=3.11
   - numpy
   - psutil
@@ -24,6 +23,7 @@ dependencies:
   - partd
   - bokeh
   - dask
+  - pip
   - pip:
       - plotly
       - scikit-learn
